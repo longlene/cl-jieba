@@ -19,15 +19,6 @@
          (idf-path :string)
          (stop-word-path :string))
 
-(defun make-jieba ()
-  (let* ((dir (asdf:system-relative-pathname :cl-jieba "dict/"))
-         (dict-path (namestring (merge-pathnames "jieba.dict.utf8" dir)))
-         (hmm-path (namestring (merge-pathnames "hmm_model.utf8" dir)))
-         (user-dict (namestring (merge-pathnames "user.dict.utf8" dir)))
-         (idf-path (namestring (merge-pathnames "idf.utf8" dir)))
-         (stop-word-path (namestring (merge-pathnames "stop_words.utf8" dir))))
-    (new-jieba dict-path hmm-path user-dict idf-path stop-word-path)))
-
 ;;void FreeJieba(Jieba);
 (defcfun ("FreeJieba" free-jieba) :void
          (jieba jieba*))

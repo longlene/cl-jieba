@@ -10,4 +10,5 @@
            #:new-extractor
            #:make-extractor
            #:extract
-           #:free-extractor))
+           #:free-extractor
+           #:with-jieba))
