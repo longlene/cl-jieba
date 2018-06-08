@@ -8,10 +8,4 @@ git clone https://github.com/longlene/cl-jieba.git ~/.quicklisp/local-projects/c
 ```
 
 ## Usage example
-```lisp
-CL-USER> (defparameter *jieba* (jieba:make-jieba))
-*JIEBA*
-CL-USER> (jieba:cut *jieba* "人艰不拆")
-("人艰" "不" "拆")
-CL-USER> (jieba:free-jieba *jieba*)
-```
+![jieba example](./res/jieba.png)
